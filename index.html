@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Maple Tooltip</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/maple.tooltip.css"/>
+    <style>
+
+        @font-face {
+        font-family: MapleStory;
+        src: url('fonts/maplelight.woff2');
+        }
+
+        @font-face {
+        font-family: MapleStoryBold;
+        src: url('fonts/maplebold.woff2');
+        }
+
+        html, body {
+            background-color: #e2e1e0;
+            color: #333;
+            font-family: 'Maplestory', sans-serif;
+            font-weight: 400;
+            padding: 0;
+            margin: 0;
+            text-rendering: optimizeLegibility;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 690px;
+        }
+        .btn {
+            background: rgba(255,255,255,0.4);
+            color: #488AC7;
+        }
+    </style>
+</head>
+  <body>
+      <div class="container mt-4">
+            <h1><img src="http://maplestory.io/api/gms/latest/mob/100006/icon?resize=2" class="float-left mr-4">Maple Tooltip <span class="text-muted">v1.0.0</span></h1>
+            <p class="lead">Easily include information from MapleStory on your website, blog, etc.</p>
+            <h3 class="mt-4">Getting Started</h3>
+            <p>1. Include the Javascript <span class="badge badge-info p-2">/src/maple.tooltip.js</span> and CSS <span class="badge badge-info p-2">/css/maple.tooltip.css</span> files in your document.</p>
+            <p>2. Initialize <b>Maple Tooltip</b> by adding the following before your &lt;/body&gt;:</p>
+            <div class="card bg-dark text-white" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                <div class="card-body">
+                    &lt;script&gt;<br/>
+                    $('[maple-id]').mapleTooltip({<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;region: "gms"<br/>
+                    });<br/>
+                    &lt;/script&gt;
+                </div>
+            </div>
+            <p class="mt-3">3. Add <span class="badge badge-info p-2">maple-id="100100"</span> to any element (this can be <a href="http://maplestory.io/api/gms/latest/mob">any</a> monster ID).</p>
+            <p>4. Congrats, now you have one grand ole' <a maple-id="100100"></a>.</p>
+        
+            <h3 class="mt-4">Examples</h3>
+            <a class="btn" maple-id="100006"></a> 
+            <a class="btn" maple-id="9300685"></a> 
+            <a class="btn" maple-id="6130101"></a> 
+
+            <h3 class="mt-4">Notes</h3> 
+            <p class="mb-0">Only supports monsters. Support for items and more will be added soon.</p>
+            <p><b>Requires <a href="//jquery.com" target="_blank">jQuery</a> and <a href="https://atomiks.github.io/tippyjs/" target="_blank">Tippy.js</a></b></p>
+            <hr/>
+            <p class="lead"><a href="http://github.com/corsair/maple-tooltip">View this project on Github</a></p>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/tippy.js@2.5.2/dist/tippy.all.min.js"></script>
+    <script src="src/maple.tooltip.js"></script>
+
+    <script type="text/javascript">
+        $('[maple-id]').mapleTooltip({
+            region: "gms"
+        });
+    </script>
+  </body>
+</html>

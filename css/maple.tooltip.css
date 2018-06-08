@@ -1,0 +1,10 @@
+.pixels {
+  image-rendering: pixelated;
+  -moz-image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+}
+
+.bg-level {
+  background: #488AC7;
+  color: #FFF;
+}
